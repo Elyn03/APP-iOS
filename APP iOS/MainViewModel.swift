@@ -9,10 +9,19 @@ import Foundation
 
 class MainViewModel: ObservableObject {
     
-    @Published var variableAccessible = 2
+    @Published var isValid = false
     
-    func checkConnection(login: String, password: String) -> Bool {
-        DataController.registeredUsers[login, password]
+    func checkConnection(login: String, password: String) {
+        if let realPassword = DataController.registeredUsers[login] {
+            print(realPassword, password)
+            if realPassword == password {
+                isValid = true
+            } else {
+                isValid = false
+            }
+        } else {
+            isValid = false
+        }
     }
     
 }

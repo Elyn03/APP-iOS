@@ -8,8 +8,16 @@
 import SwiftUI
 
 struct MenuAppsView: View {
+    
     var body: some View {
-        Text("MENU DES APPS")
+        VStack {
+            Text("MENU DES APPS")
+            
+            ForEach(availableApps.allCases, id: \.self) {
+                nameApp in
+                IconeView(image: Image("fox"), name: String(nameApp.rawValue))
+            }
+        }
     }
 }
 

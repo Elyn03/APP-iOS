@@ -9,7 +9,7 @@ import SwiftUI
 
 struct KeyNumberView: View {
     
-    @StateObject var viewModel = MainViewModel()
+    @StateObject var viewModel = ViewModel()
     let keyNumber: String
     
     var body: some View {
@@ -19,6 +19,7 @@ struct KeyNumberView: View {
                 .frame(width: 100, height: 60)
             Text(keyNumber)
                 .font(.system(size: 32))
+                .foregroundStyle(AppParameters.color02)
         }
     }
 }

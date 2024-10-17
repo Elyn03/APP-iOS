@@ -8,10 +8,6 @@
 import Foundation
 
 class DataController {
-//    struct StudentTest {
-//        var name: String
-//        var age: Int
-//    }
     
     static let registeredUsers: [String: String] = [
         "0": "0",
@@ -22,19 +18,31 @@ class DataController {
     static let registeredContacts: [String: Int] = [
         "Jean": 0768084865,
         "Paul": 0796548552,
-        "Lila": 0708559438
+        "Lila": 0708559438,
+        "Steph": 0700000000
     ]
     
-    static let recentsCall: [String: String] = [
-        "Jean": "Monday",
-        "0768084865": "Tuesday",
-        "Lila": "Saturday",
-        "0768084865": "Saturday"
+    static var recentsCall: [[String]] = [
+        [ "0758876548", "18 Sep., 09:22", "incoming" ],
+        [ "Jean", "12 Aug., 11:52", "outgoing" ],
+        [ "0768084865", "29 Jul., 15:14", "missed" ],
+        [ "Lila", "29 Jul., 10:00", "incoming" ],
     ]
     
-//    func checkDico(dico: [String: StudentTest]) {
-//        for element in dico {
-//            print("\(element.key) s'appelle \(element.name) et a \(element.age)")
-//        }
-//    }
+    static let questionsQuizz: [String: String] = [
+        "Where do arctic foxes live?": "at the North Pole and elsewhere",
+        "How many years can they live?": "They live for 3 and 4 years",
+        "What is the diet of desert foxes?": "Omnivore",
+        "What are the baby foxes called?": "Foxes cubs",
+        "How fast they can run?": "72km for h"
+    ]
+    
+    static let answersQuizz: [[String]] = [
+        [ "In the North Pole", "At the North Pole and elsewhere", "In the woods" ],
+        [ "They live 10 years", "They live for 5 and 7 years", "They live for 3 and 4 years" ],
+        [ "Carnibor", "Omnivore", "Ervivorous" ],
+        [ "Little foxes", "Foxes cubs", "Baby foxes" ],
+        [ "72km for h", "70km for h", "77km for h" ]
+    ]
+    
 }

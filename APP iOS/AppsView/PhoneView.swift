@@ -9,16 +9,18 @@ import SwiftUI
 
 struct PhoneView: View {
     
-    @StateObject var viewModel = MainViewModel()
+    @StateObject var viewModel = ViewModel()
 
     var body: some View {
         VStack {
-            Spacer()
-            VStack {
-                Spacer()
+            ScrollView {
+                ForEach(viewModel.recentCalls, id: \.self) {
+                    call in
+                    RecentCallView(name: call[0], date: call[1], type: call[2])
+                }
             }
-            .frame(width: 100, height: 100)
-            .background(.red)
+            .frame(maxWidth: .infinity)
+            .padding()
             
             VStack {
                 HStack {
@@ -28,7 +30,7 @@ struct PhoneView: View {
                             .fill(.white)
                             .frame(maxWidth: .infinity, maxHeight: 70)
                         Text(viewModel.phoneNumber)
-                            .foregroundStyle(AppParameters.color05)
+                            .foregroundStyle(AppParameters.color02)
                             .font(.system(size: 32))
                     }
                     VStack {
@@ -107,11 +109,13 @@ struct PhoneView: View {
                     HStack(spacing: 10) {
                         ZStack {
                             RoundedRectangle(cornerRadius: 50)
-                                .fill(AppParameters.color03)
+                                .fill(AppParameters.color05)
                                 .frame(width: 90, height: 70)
                             Image(systemName: "phone.fill")
                                 .font(.system(size: 40))
-                                .foregroundColor(AppParameters.color05)
+                                .foregroundColor(AppParameters.color03)
+                        }.onTapGesture {
+                            viewModel.callNumber(name: viewModel.phoneNumber, date: viewModel.getTodayDatetime(), type: "missed")
                         }
                     }
                 }

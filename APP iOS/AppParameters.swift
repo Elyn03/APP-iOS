@@ -27,20 +27,26 @@ class AppParameters {
 }
 
 enum availableApps: String {
-    static let allCases: [availableApps] = [.shifumi, .phone, .calculator]
+    static let allCases: [availableApps] = [.shifumi, .phone, .home, .map, .quizz]
     
     case shifumi = "Shifumi"
     case phone = "Phone"
-    case calculator = "Calculator"
+    case home = "Home"
+    case map = "Map"
+    case quizz = "Quizz"
     
     var image: Image {
         switch self {
             case .shifumi:
-                return Image(systemName: "hand.raised.fill")
+                return Image(systemName: "hand.raised")
             case .phone:
-                return Image(systemName: "phone.fill")
-            case .calculator:
-                return Image(systemName: "plus.slash.minus")
+                return Image(systemName: "phone")
+            case .map:
+                return Image(systemName: "map")
+            case .quizz:
+                return Image(systemName: "quote.bubble")
+            default:
+                return Image(systemName: "house")
         }
     }
     
@@ -50,19 +56,27 @@ enum availableApps: String {
                 return "Shifumi"
             case .phone:
                 return "Phone"
-            case .calculator:
-                return "Calculator"
+            case .map:
+                return "Map"
+            case .quizz:
+                return "Quizz"
+            default:
+                return "Home"
         }
     }
     
     @ViewBuilder var appView: some View {
         switch self {
             case .shifumi:
-                MenuAppsView()
+                ShifumiView()
             case .phone:
                 PhoneView()
-            case .calculator:
-                CalculatorView()
+            case .map:
+                MainView()
+            case .quizz:
+                QuizzView()
+            default:
+                MainView()
             }
         }
 }

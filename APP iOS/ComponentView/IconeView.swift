@@ -15,14 +15,13 @@ struct IconeView: View {
     var body: some View {
         VStack(alignment: .center) {
             image
-                .resizable()
-                .frame(width: 100, height: 100)
-                .clipShape(RoundedRectangle(cornerRadius: 10))
+                .font(.system(size: 30))
+                .foregroundStyle(AppParameters.color01)
             Text("\(name)")
+                .foregroundStyle(AppParameters.color01)
         }
+        .frame(maxWidth: 50)
         .padding(10)
-        .background(.yellow)
-        .frame(width: 100, height: 100)
     }
 }
 

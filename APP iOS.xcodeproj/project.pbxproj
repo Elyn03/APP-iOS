@@ -7,15 +7,18 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		01B1D4302CBEAA16009D7A62 /* MenuAppsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1D42F2CBEAA16009D7A62 /* MenuAppsView.swift */; };
+		019599492CC0FBAE00A17997 /* StatusView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 019599482CC0FBAE00A17997 /* StatusView.swift */; };
+		0195994B2CC10BE400A17997 /* RecentCallView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195994A2CC10BE400A17997 /* RecentCallView.swift */; };
+		0195994D2CC12F8F00A17997 /* ShifumiCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0195994C2CC12F8F00A17997 /* ShifumiCardView.swift */; };
+		01B1D4302CBEAA16009D7A62 /* QuizzView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1D42F2CBEAA16009D7A62 /* QuizzView.swift */; };
 		01B1D4372CBEB414009D7A62 /* AppParameters.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1D4362CBEB414009D7A62 /* AppParameters.swift */; };
 		01B1D4392CBEB5BD009D7A62 /* DataController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1D4382CBEB5BD009D7A62 /* DataController.swift */; };
-		01B1D43B2CBEB9A6009D7A62 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1D43A2CBEB9A6009D7A62 /* MainViewModel.swift */; };
+		01B1D43B2CBEB9A6009D7A62 /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01B1D43A2CBEB9A6009D7A62 /* ViewModel.swift */; };
 		01BA51DD2CBF9F210007CEFF /* APP_iOSTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01BA51DC2CBF9F210007CEFF /* APP_iOSTests.swift */; };
 		01C7F9C02CBFBBE80088994D /* IconeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F9BF2CBFBBE80088994D /* IconeView.swift */; };
 		01C7F9C32CBFC8C80088994D /* Extension+View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F9C22CBFC8C80088994D /* Extension+View.swift */; };
 		01C7F9C72CBFCA670088994D /* MainView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F9C62CBFCA660088994D /* MainView.swift */; };
-		01C7F9CA2CBFE98E0088994D /* CalculatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F9C92CBFE98E0088994D /* CalculatorView.swift */; };
+		01C7F9CA2CBFE98E0088994D /* ShifumiView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F9C92CBFE98E0088994D /* ShifumiView.swift */; };
 		01C7F9CC2CBFF3BC0088994D /* KeyNumberView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01C7F9CB2CBFF3BC0088994D /* KeyNumberView.swift */; };
 		01D161042CBE771300F3F34D /* APP_iOSApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D161032CBE771300F3F34D /* APP_iOSApp.swift */; };
 		01D161062CBE771300F3F34D /* PhoneView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 01D161052CBE771300F3F34D /* PhoneView.swift */; };
@@ -34,16 +37,19 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		01B1D42F2CBEAA16009D7A62 /* MenuAppsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuAppsView.swift; sourceTree = "<group>"; };
+		019599482CC0FBAE00A17997 /* StatusView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StatusView.swift; sourceTree = "<group>"; };
+		0195994A2CC10BE400A17997 /* RecentCallView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RecentCallView.swift; sourceTree = "<group>"; };
+		0195994C2CC12F8F00A17997 /* ShifumiCardView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShifumiCardView.swift; sourceTree = "<group>"; };
+		01B1D42F2CBEAA16009D7A62 /* QuizzView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = QuizzView.swift; sourceTree = "<group>"; };
 		01B1D4362CBEB414009D7A62 /* AppParameters.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppParameters.swift; sourceTree = "<group>"; };
 		01B1D4382CBEB5BD009D7A62 /* DataController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DataController.swift; sourceTree = "<group>"; };
-		01B1D43A2CBEB9A6009D7A62 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		01B1D43A2CBEB9A6009D7A62 /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
 		01BA51DA2CBF9F210007CEFF /* APP iOSTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "APP iOSTests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01BA51DC2CBF9F210007CEFF /* APP_iOSTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APP_iOSTests.swift; sourceTree = "<group>"; };
 		01C7F9BF2CBFBBE80088994D /* IconeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IconeView.swift; sourceTree = "<group>"; };
 		01C7F9C22CBFC8C80088994D /* Extension+View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Extension+View.swift"; sourceTree = "<group>"; };
 		01C7F9C62CBFCA660088994D /* MainView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainView.swift; sourceTree = "<group>"; };
-		01C7F9C92CBFE98E0088994D /* CalculatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CalculatorView.swift; sourceTree = "<group>"; };
+		01C7F9C92CBFE98E0088994D /* ShifumiView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShifumiView.swift; sourceTree = "<group>"; };
 		01C7F9CB2CBFF3BC0088994D /* KeyNumberView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = KeyNumberView.swift; sourceTree = "<group>"; };
 		01D161002CBE771300F3F34D /* APP iOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "APP iOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		01D161032CBE771300F3F34D /* APP_iOSApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APP_iOSApp.swift; sourceTree = "<group>"; };
@@ -89,7 +95,8 @@
 			isa = PBXGroup;
 			children = (
 				01D161052CBE771300F3F34D /* PhoneView.swift */,
-				01C7F9C92CBFE98E0088994D /* CalculatorView.swift */,
+				01B1D42F2CBEAA16009D7A62 /* QuizzView.swift */,
+				01C7F9C92CBFE98E0088994D /* ShifumiView.swift */,
 			);
 			path = AppsView;
 			sourceTree = "<group>";
@@ -99,6 +106,9 @@
 			children = (
 				01C7F9CB2CBFF3BC0088994D /* KeyNumberView.swift */,
 				01C7F9BF2CBFBBE80088994D /* IconeView.swift */,
+				019599482CC0FBAE00A17997 /* StatusView.swift */,
+				0195994A2CC10BE400A17997 /* RecentCallView.swift */,
+				0195994C2CC12F8F00A17997 /* ShifumiCardView.swift */,
 			);
 			path = ComponentView;
 			sourceTree = "<group>";
@@ -126,9 +136,8 @@
 			children = (
 				01C7F9CD2CBFFB410088994D /* ComponentView */,
 				01C7F9C82CBFE8940088994D /* AppsView */,
-				01B1D42F2CBEAA16009D7A62 /* MenuAppsView.swift */,
 				01C7F9C22CBFC8C80088994D /* Extension+View.swift */,
-				01B1D43A2CBEB9A6009D7A62 /* MainViewModel.swift */,
+				01B1D43A2CBEB9A6009D7A62 /* ViewModel.swift */,
 				01B1D4362CBEB414009D7A62 /* AppParameters.swift */,
 				01C7F9C62CBFCA660088994D /* MainView.swift */,
 				01D161032CBE771300F3F34D /* APP_iOSApp.swift */,
@@ -256,15 +265,18 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				01B1D43B2CBEB9A6009D7A62 /* MainViewModel.swift in Sources */,
+				0195994B2CC10BE400A17997 /* RecentCallView.swift in Sources */,
+				01B1D43B2CBEB9A6009D7A62 /* ViewModel.swift in Sources */,
 				01C7F9C32CBFC8C80088994D /* Extension+View.swift in Sources */,
+				019599492CC0FBAE00A17997 /* StatusView.swift in Sources */,
+				0195994D2CC12F8F00A17997 /* ShifumiCardView.swift in Sources */,
 				01C7F9C72CBFCA670088994D /* MainView.swift in Sources */,
 				01B1D4372CBEB414009D7A62 /* AppParameters.swift in Sources */,
 				01B1D4392CBEB5BD009D7A62 /* DataController.swift in Sources */,
 				01C7F9CC2CBFF3BC0088994D /* KeyNumberView.swift in Sources */,
 				01C7F9C02CBFBBE80088994D /* IconeView.swift in Sources */,
-				01C7F9CA2CBFE98E0088994D /* CalculatorView.swift in Sources */,
-				01B1D4302CBEAA16009D7A62 /* MenuAppsView.swift in Sources */,
+				01C7F9CA2CBFE98E0088994D /* ShifumiView.swift in Sources */,
+				01B1D4302CBEAA16009D7A62 /* QuizzView.swift in Sources */,
 				01D161062CBE771300F3F34D /* PhoneView.swift in Sources */,
 				01D161042CBE771300F3F34D /* APP_iOSApp.swift in Sources */,
 			);

@@ -27,12 +27,11 @@ class AppParameters {
 }
 
 enum availableApps: String {
-    static let allCases: [availableApps] = [.shifumi, .phone, .home, .map, .quizz]
+    static let allCases: [availableApps] = [.home, .phone, .shifumi, .quizz]
     
     case shifumi = "Shifumi"
     case phone = "Phone"
     case home = "Home"
-    case map = "Map"
     case quizz = "Quizz"
     
     var image: Image {
@@ -41,8 +40,6 @@ enum availableApps: String {
                 return Image(systemName: "hand.raised")
             case .phone:
                 return Image(systemName: "phone")
-            case .map:
-                return Image(systemName: "map")
             case .quizz:
                 return Image(systemName: "quote.bubble")
             default:
@@ -56,8 +53,6 @@ enum availableApps: String {
                 return "Shifumi"
             case .phone:
                 return "Phone"
-            case .map:
-                return "Map"
             case .quizz:
                 return "Quizz"
             default:
@@ -71,8 +66,6 @@ enum availableApps: String {
                 ShifumiView()
             case .phone:
                 PhoneView()
-            case .map:
-                MainView()
             case .quizz:
                 QuizzView()
             default:

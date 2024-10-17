@@ -12,10 +12,12 @@ struct QuizzView: View {
     @StateObject var viewModel = ViewModel()
     
     @State var numberOfQuestion: Int = 0
-    
+    @State var isCorrect: Bool = false
+
     var body: some View {
         ScrollView {
-            Text("MENU DES APPS")
+            Text("Foxes Quizz")
+                .font(.system(size: 48))
             
             ForEach(0 ..< numberOfQuestion, id: \.self) { index in
                 VStack {
@@ -41,7 +43,7 @@ struct QuizzView: View {
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .foregroundStyle(AppParameters.color02)
                         .onTapGesture {
-                            viewModel.correctTheQuestion(question: viewModel.allQuestions[index], answer: viewModel.answers[index][0])
+                            isCorrect = viewModel.correctTheQuestion(question: viewModel.allQuestions[index], answer: viewModel.answers[index][0])
                         }
 
                         HStack {
@@ -55,7 +57,10 @@ struct QuizzView: View {
                         .background(AppParameters.color03)
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .foregroundStyle(AppParameters.color02)
-
+                        .onTapGesture {
+                            isCorrect = viewModel.correctTheQuestion(question: viewModel.allQuestions[index], answer: viewModel.answers[index][1])
+                        }
+                        
                         HStack {
                             Image(systemName: "3.circle")
                             Text(viewModel.answers[index][2])
@@ -67,12 +72,17 @@ struct QuizzView: View {
                         .background(AppParameters.color03)
                         .clipShape(RoundedRectangle(cornerRadius: 25))
                         .foregroundStyle(AppParameters.color02)
-
+                        .onTapGesture {
+                            isCorrect = viewModel.correctTheQuestion(question: viewModel.allQuestions[index], answer: viewModel.answers[index][2])
+                        }
                     }
                     .padding()
 
                 }
                 .padding()
+                .alert(isPresented: $isCorrect) {
+                    Alert(title: Text("Correct"), message: Text("Correct answer"))
+                }
 
             }
             

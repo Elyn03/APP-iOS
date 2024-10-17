@@ -30,19 +30,19 @@ class DataController {
     ]
     
     static let questionsQuizz: [String: String] = [
-        "Where do arctic foxes live?": "at the North Pole and elsewhere",
+        "How fast they can run?": "72km for h",
         "How many years can they live?": "They live for 3 and 4 years",
-        "What is the diet of desert foxes?": "Omnivore",
         "What are the baby foxes called?": "Foxes cubs",
-        "How fast they can run?": "72km for h"
+        "What is the diet of desert foxes?": "Omnivore",
+        "Where do arctic foxes live?": "at the North Pole and elsewhere"
     ]
     
     static let answersQuizz: [[String]] = [
-        [ "In the North Pole", "At the North Pole and elsewhere", "In the woods" ],
+        [ "72km for h", "70km for h", "77km for h" ],
         [ "They live 10 years", "They live for 5 and 7 years", "They live for 3 and 4 years" ],
-        [ "Carnibor", "Omnivore", "Ervivorous" ],
         [ "Little foxes", "Foxes cubs", "Baby foxes" ],
-        [ "72km for h", "70km for h", "77km for h" ]
+        [ "Carnibor", "Omnivore", "Ervivorous" ],
+        [ "In the North Pole", "At the North Pole and elsewhere", "In the woods" ]
     ]
     
 }

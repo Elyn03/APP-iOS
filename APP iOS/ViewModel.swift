@@ -30,7 +30,6 @@ class ViewModel: ObservableObject {
     // login page
     func checkConnection(login: String, password: String) {
         if let realPassword = DataController.registeredUsers[login] {
-            print(realPassword, password)
             if realPassword == password {
                 isValid = true
                 passwordError = ""
@@ -63,9 +62,6 @@ class ViewModel: ObservableObject {
     
     func callNumber(name: String, date: String, type: String) {
         let newName = searchContact(numberComposed: name)
-        
-        print(newName)
-        
         DataController.recentsCall.insert([newName, date, type], at: 0)
         recentCalls = DataController.recentsCall
         phoneNumber = ""
@@ -73,7 +69,6 @@ class ViewModel: ObservableObject {
     
     func searchContact(numberComposed: String) -> String {
         for (name, number) in DataController.registeredContacts {
-            print(numberComposed, number)
             if numberComposed == "0" + String(number) {
                 return name
             }
@@ -108,9 +103,7 @@ class ViewModel: ObservableObject {
         }
         
         selectedSymbol = symbol
-        
-        print(selectedSymbol, robotSelectedSymbol)
-        
+            
         let winnerChoice: [String: String] = [
             "Shi": "Mi",
             "Fu": "Shi",
@@ -129,8 +122,6 @@ class ViewModel: ObservableObject {
         }
         
         symbolsIcons = [getSymboleIcon(symbole: selectedSymbol), getSymboleIcon(symbole: robotSelectedSymbol)]
-        print(symbolsIcons)
-        
     }
     
     func getSymboleIcon(symbole: String) -> String {
@@ -147,20 +138,17 @@ class ViewModel: ObservableObject {
     // Quizz
     
     func generateQuestions() {
-        print(questions)
-        for (question, answer) in questions {
-            print(question)
+        let sortedQuestions = questions.keys.sorted() // Sorts the keys alphabetically
+        for question in sortedQuestions {
             allQuestions.append(question)
         }
-        
-        print(allQuestions)
-        print(questions)
     }
-    
+
     func correctTheQuestion(question: String, answer: String) -> Bool {
-        print(question)
-//        let rightAnswer = questions[question]
-        
+        let rightAnswer = questions[question]
+        if answer == rightAnswer {
+            return true
+        }
         return false
     }
 }
